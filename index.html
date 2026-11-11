@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080808">
+<title>Dhivya A. | Audit & Accounting</title>
+<meta name="description" content="Dhivya A. — Audit Assistant and Accountant portfolio">
+<style>
+:root{--gold:#d6b36a;--gold2:#f5df9b;--bg:#080808;--muted:#aaa}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:#f6f3ed;font-family:Inter,Segoe UI,Arial,sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+nav{position:fixed;z-index:20;top:0;left:0;width:100%;display:flex;justify-content:space-between;align-items:center;padding:20px 7%;background:linear-gradient(#050505dd,transparent);backdrop-filter:blur(8px)}
+.logo{font-weight:800;letter-spacing:2px;color:var(--gold);font-size:1.1rem}
+.navlinks{display:flex;gap:24px;font-size:.82rem;color:#ddd}
+.navlinks a:hover{color:var(--gold)}
+.menu{display:none;background:none;color:white;border:0;font-size:1.5rem}
+section{position:relative;padding:100px 8%;min-height:75vh}
+.hero{min-height:100vh;display:flex;align-items:center;padding-top:130px;overflow:hidden}
+.hero video,.video-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;opacity:.38}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#050505 5%,#050505bb 55%,#05050555),linear-gradient(0deg,#080808,transparent 35%);z-index:-1}
+.hero-content{max-width:850px}
+.eyebrow{color:var(--gold);letter-spacing:4px;text-transform:uppercase;font-size:.75rem;margin-bottom:20px}
+h1{font-size:clamp(3rem,8vw,7rem);line-height:.98;letter-spacing:-3px;margin-bottom:24px}
+h1 span,.gold{color:var(--gold)}
+.hero p{max-width:600px;color:#c7c7c7;line-height:1.8;font-size:1.05rem}
+.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
+.btn{padding:13px 22px;border:1px solid var(--gold);border-radius:2px;display:inline-block;font-size:.85rem;letter-spacing:.5px;transition:.25s}
+.btn.primary{background:var(--gold);color:#111;font-weight:700}
+.btn:hover{transform:translateY(-3px);box-shadow:0 8px 30px #d6b36a30}
+.section-title{font-size:clamp(2rem,5vw,3.7rem);margin-bottom:16px;letter-spacing:-1px}
+.section-lead{color:#aaa;max-width:680px;line-height:1.8;margin-bottom:42px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.panel{border:1px solid #ffffff18;background:linear-gradient(135deg,#ffffff09,#ffffff02);padding:28px;border-radius:8px;transition:.3s}
+.panel:hover{border-color:#d6b36a70;transform:translateY(-4px)}
+.panel h3{color:var(--gold);margin-bottom:12px;font-size:1.2rem}
+.panel p,.panel li{color:#bbb;line-height:1.75}
+.panel ul{padding-left:18px}
+.timeline{border-left:1px solid #d6b36a66;padding-left:28px;margin-left:8px}
+.timeline .panel{margin-bottom:20px;position:relative}
+.timeline .panel:before{content:"";position:absolute;width:9px;height:9px;border-radius:50%;background:var(--gold);left:-33px;top:32px;box-shadow:0 0 15px var(--gold)}
+.video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.video-card{border:1px solid #ffffff20;border-radius:8px;overflow:hidden;background:#111}
+.video-card video{width:100%;aspect-ratio:16/9;display:block;object-fit:cover;background:#151515}
+.video-card .caption{padding:18px}
+.caption h3{color:var(--gold);margin-bottom:7px}
+.caption p{color:#aaa;font-size:.9rem;line-height:1.6}
+.skills{display:flex;flex-wrap:wrap;gap:12px}
+.skill{border:1px solid #d6b36a55;padding:12px 17px;border-radius:30px;color:#e7d5a8;font-size:.9rem}
+.contact-box{text-align:center;max-width:780px;margin:auto;padding:50px 30px;border:1px solid #d6b36a55;background:radial-gradient(ellipse at top,#d6b36a12,transparent 65%)}
+.contact-box p{color:#aaa;line-height:1.8;margin:20px 0}
+footer{text-align:center;padding:28px;color:#777;border-top:1px solid #ffffff12;font-size:.8rem}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+#progress{position:fixed;top:0;left:0;height:2px;width:0;background:var(--gold);z-index:30}
+@media(max-width:760px){
+ nav{padding:17px 5%}.menu{display:block}.navlinks{display:none;position:absolute;top:62px;right:5%;background:#101010;border:1px solid #ffffff20;padding:20px;border-radius:8px;flex-direction:column;gap:17px}.navlinks.open{display:flex}
+ section{padding:85px 6%}.hero{padding-top:120px}h1{letter-spacing:-1.5px}.grid,.video-grid{grid-template-columns:1fr}.panel{padding:23px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{transition:none}}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+<nav>
+  <a class="logo" href="#home">DHIVYA A.</a>
+  <button class="menu" aria-label="Open menu" onclick="document.querySelector('.navlinks').classList.toggle('open')">☰</button>
+  <div class="navlinks">
+    <a href="#about">ABOUT</a><a href="#experience">EXPERIENCE</a><a href="#skills">SKILLS</a>
+    <a href="#showreel">CINEMATIC</a><a href="#resume">RESUME</a><a href="#contact">CONTACT</a>
+  </div>
+</nav>
+
+<section class="hero" id="home">
+  <video autoplay muted loop playsinline poster="images/hero.png"><source src="videos/clip-1.mp4" type="video/mp4"></video>
+  <div class="hero-content reveal">
+    <div class="eyebrow">Audit • Accounting • Compliance</div>
+    <h1>Precision in<br><span>Every Number.</span></h1>
+    <p>Audit Assistant & Accountant with experience supporting statutory and internal audit, accounting operations, GST and TDS compliance.</p>
+    <div class="actions"><a class="btn primary" href="#experience">Explore My Work</a><a class="btn" href="#contact">Contact Me</a></div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="eyebrow reveal">01 / About</div><h2 class="section-title reveal">A detail-driven <span class="gold">professional.</span></h2>
+  <p class="section-lead reveal">I bring a careful, organized approach to accounting and audit work—combining financial accuracy, compliance awareness and a commitment to continuous learning.</p>
+  <div class="grid">
+    <article class="panel reveal"><h3>Professional Focus</h3><p>Audit documentation, verification of financial records, reconciliations, tax compliance support and maintaining reliable accounting information.</p></article>
+    <article class="panel reveal"><h3>Education</h3><p><strong>M.Com</strong><br>V.V. Vanniaperumal College for Women · 2021</p></article>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="eyebrow reveal">02 / Experience</div><h2 class="section-title reveal">Work <span class="gold">experience.</span></h2>
+  <p class="section-lead reveal">Practical exposure across audit assignments and accounting responsibilities.</p>
+  <div class="timeline">
+    <article class="panel reveal"><h3>Audit Staff · K.V. & Co.</h3><p class="gold">February 2026 – Present</p><ul><li>Support audit assignments and prepare working papers.</li><li>Assist with TDS and GST computation and filing.</li><li>Review records, documents and supporting schedules.</li></ul></article>
+    <article class="panel reveal"><h3>Audit Assistant · VKD Associates</h3><p class="gold">February 2022 – March 2023</p><ul><li>Assisted in audit procedures and verification of books and vouchers.</li><li>Organized audit documentation and supporting evidence.</li><li>Supported reconciliation and preparation of audit schedules.</li></ul></article>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="eyebrow reveal">03 / Capabilities</div><h2 class="section-title reveal">Tools & <span class="gold">expertise.</span></h2>
+  <p class="section-lead reveal">Core accounting, audit and compliance capabilities.</p>
+  <div class="skills reveal">
+    <span class="skill">Statutory Audit</span><span class="skill">Internal Audit</span><span class="skill">GST</span><span class="skill">TDS</span>
+    <span class="skill">Tax Compliance</span><span class="skill">Accounting</span><span class="skill">Reconciliation</span>
+    <span class="skill">Tally Prime</span><span class="skill">MS Excel</span><span class="skill">MS Office</span>
+    <span class="skill">Audit Working Papers</span><span class="skill">Financial Records</span>
+  </div>
+</section>
+
+<section id="showreel">
+  <div class="eyebrow reveal">04 / Cinematic Portfolio</div><h2 class="section-title reveal">My professional <span class="gold">story.</span></h2>
+  <p class="section-lead reveal">Five cinematic moments. Replace the sample video files with your own Google Flow clips.</p>
+  <div class="video-grid">
+    <article class="video-card reveal"><video controls playsinline preload="metadata" poster="images/hero.png"><source src="videos/clip-1.mp4" type="video/mp4"></video><div class="caption"><h3>01 · Introduction</h3><p>A cinematic introduction to my professional journey.</p></div></article>
+    <article class="video-card reveal"><video controls playsinline preload="metadata" poster="images/about.png"><source src="videos/clip-2.mp4" type="video/mp4"></video><div class="caption"><h3>02 · Audit Focus</h3><p>Careful review, documentation and attention to detail.</p></div></article>
+    <article class="video-card reveal"><video controls playsinline preload="metadata" poster="images/work.png"><source src="videos/clip-3.mp4" type="video/mp4"></video><div class="caption"><h3>03 · Working at Laptop</h3><p>Accounting work, analysis and professional productivity.</p></div></article>
+    <article class="video-card reveal"><video controls playsinline preload="metadata"><source src="videos/clip-4.mp4" type="video/mp4"></video><div class="caption"><h3>04 · Compliance</h3><p>Supporting tax compliance and accurate financial records.</p></div></article>
+    <article class="video-card reveal"><video controls playsinline preload="metadata"><source src="videos/clip-5.mp4" type="video/mp4"></video><div class="caption"><h3>05 · Career Vision</h3><p>Learning, growing and building a strong accounting career.</p></div></article>
+  </div>
+</section>
+
+<section id="resume">
+  <div class="eyebrow reveal">05 / Résumé</div><h2 class="section-title reveal">Let’s review my <span class="gold">profile.</span></h2>
+  <p class="section-lead reveal">Download my résumé for a detailed overview of my experience and qualifications.</p>
+  <div class="actions reveal"><a class="btn primary" href="resume.pdf" download>Download Résumé (PDF)</a></div>
+</section>
+
+<section id="contact">
+  <div class="contact-box reveal"><div class="eyebrow">06 / Contact</div><h2 class="section-title">Let’s work <span class="gold">together.</span></h2>
+  <p>Open to accounting, audit and finance opportunities. Reach out to discuss a role or collaboration.</p>
+  <div class="actions" style="justify-content:center">
+    <a class="btn primary" href="mailto:shreedhivyaarumugam@gmail.com">Email Me</a>
+    <a class="btn" href="https://www.linkedin.com/in/dhivya-a-552130215/" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn" href="tel:9486088733">Call</a>
+  </div></div>
+</section>
+<footer>© <span id="year"></span> Dhivya A. · Designed with precision.</footer>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+window.addEventListener('scroll',()=>{const max=document.documentElement.scrollHeight-innerHeight;document.getElementById('progress').style.width=(max?scrollY/max*100:0)+'%'});
+document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.navlinks').classList.remove('open')));
+</script>
+</body>
+</html>
